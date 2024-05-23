@@ -74,7 +74,8 @@ body {
 .section-body ul {
     list-style-type: none;
     width: 18%;
-    background-color: #d6e4f0;
+    border-radius: 10px;
+    background-color: #438ea9;
     position: fixed;
     height: auto;
     overflow: auto;
