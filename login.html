@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>DSCET eBooks - Sign In</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <title>DSCET eBooks - Login</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="/index.html"><span>DSCET</span> eBooks</a>
+                <a href="index.html"><span>DSCET</span> eBooks</a>
             </div>
             <div class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/products.html">Books</a></li>
-                <li><a href="/About.html">About Us</a></li>
-                <li><a href="/login.html" class="btn-login">Sign In</a></li>
-                <li><a href="/Register.html" class="btn-register">Register</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Books</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="Register.html">Register</a></li>
             </div>
             <div class="hamburger-menu">
                 <i class="fas fa-bars"></i>
@@ -35,7 +34,7 @@
                 <p>Sign in to your account to access your ebooks</p>
             </div>
 
-            <form id="login-form" class="login-form" action="/index.html" method="POST">
+            <form id="login-form" class="login-form" action="index.html" method="POST">
                 <div class="form-group">
                     <label for="username"><i class="fas fa-user"></i> Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
@@ -60,20 +59,35 @@
                 <button type="submit" class="btn-signin">Sign In</button>
                 
                 <div class="login-divider">
-                    <span>or</span>
+                    <span>or sign in with</span>
                 </div>
                 
-                <div class="social-signin">
-                    <button type="button" class="btn-social google">
-                        <i class="fab fa-google"></i> Sign in with Google
-                    </button>
+                <div class="social-login">
+                    <div id="g_id_onload"
+                        data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                        data-context="signin"
+                        data-ux_mode="popup"
+                        data-callback="handleGoogleSignIn"
+                        data-auto_prompt="false">
+                    </div>
+                    
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="rectangular"
+                        data-theme="filled_blue"
+                        data-text="signin_with"
+                        data-size="large"
+                        data-logo_alignment="left"
+                        data-width="100%">
+                    </div>
+                    
                     <button type="button" class="btn-social facebook">
-                        <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                        <i class="fab fa-facebook-f"></i> Facebook
                     </button>
                 </div>
                 
                 <div class="create-account">
-                    <p>Don't have an account? <a href="/Register.html">Create one</a></p>
+                    <p>Don't have an account? <a href="Register.html">Create one</a></p>
                 </div>
             </form>
         </div>
@@ -110,8 +124,33 @@
         // Login form submission
         document.getElementById('login-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            window.location.href = '/index.html';
+            window.location.href = 'index.html';
         });
+        
+        // Handle Google Sign In
+        function handleGoogleSignIn(response) {
+            // Get the ID token from the response
+            const credential = response.credential;
+            const userInfo = parseJwt(credential);
+            
+            console.log("User signed in with Google:", userInfo);
+            
+            // You would normally send this token to your server for verification
+            // For demonstration purposes, we'll just redirect to the homepage
+            alert(`Welcome, ${userInfo.name}! You've successfully signed in with Google.`);
+            window.location.href = 'index.html';
+        }
+        
+        // Parse the JWT token to get user info
+        function parseJwt(token) {
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+            
+            return JSON.parse(jsonPayload);
+        }
     </script>
 </body>
 </html>

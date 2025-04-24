@@ -158,36 +158,78 @@
     margin-bottom: 25px;
 }
 
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
 .btn-social {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
+    width: 100%;
 }
 
-.btn-social i {
-    margin-right: 10px;
+.g_id_signin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
-.btn-social.google {
-    background-color: #db4437;
-    color: white;
+.g_id_signin > div,
+.g_id_signin iframe {
+    width: 100% !important;
 }
 
-.btn-social.facebook {
+.google {
+    background-color: #fff;
+    color: #757575;
+    border: 1px solid #ddd;
+}
+
+.google:hover {
+    background-color: #f1f1f1;
+}
+
+.facebook {
     background-color: #4267B2;
     color: white;
 }
 
-.btn-social:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
+.facebook:hover {
+    background-color: #365899;
+}
+
+.login-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #777;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.login-divider span {
+    padding: 0 10px;
+    font-size: 14px;
 }
 
 .create-account {
@@ -228,6 +270,17 @@
 
     .forgot-password {
         align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-login {
+        flex-direction: column;
+    }
+    
+    .g_id_signin,
+    .btn-social {
+        width: 100%;
     }
 }
 
