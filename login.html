@@ -1,39 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="/css/login.css">
-<title> CSS Login Screen Tutorial </title>
-<style>
-  
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>DSCET eBooks - Sign In</title>
 </head>
 <body>
-  <body>
-    <nav class="navbar">
-        <div class="nav-right">
-           <!--  <li><a href="/index.html">Home</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/About.html">About</a></li> -->
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="/Register.html">Create Account</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><span>DSCET</span> eBooks</a>
+            </div>
+            <div class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Books</a></li>
+                <li><a href="/About.html">About Us</a></li>
+                <li><a href="/login.html" class="btn-login">Sign In</a></li>
+                <li><a href="/Register.html" class="btn-register">Register</a></li>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your account to access your ebooks</p>
+            </div>
+
+            <form id="login-form" class="login-form" action="/index.html" method="POST">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required maxlength="20">
+                    <span class="password-toggle" id="password-toggle">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-signin">Sign In</button>
+                
+                <div class="login-divider">
+                    <span>or</span>
+                </div>
+                
+                <div class="social-signin">
+                    <button type="button" class="btn-social google">
+                        <i class="fab fa-google"></i> Sign in with Google
+                    </button>
+                    <button type="button" class="btn-social facebook">
+                        <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                    </button>
+                </div>
+                
+                <div class="create-account">
+                    <p>Don't have an account? <a href="/Register.html">Create one</a></p>
+                </div>
+            </form>
         </div>
-    </nav> 
-    <div class="login-page">
-      <div class="form">
-        <div class="login">
-          <div class="login-header">
-            <h3>LOGIN</h3>
-            <p>Please enter your credentials to login.</p>
-          </div>
-        </div>
-        <form class="login-form">
-          <input type="text" placeholder="username" id="name" name="name" required />
-          <input type="password" placeholder="password" id="password" name="password" required maxlength="10" />
-          <button type="submit" ><a href="index.html" style="text-decoration: none;">Login</a></button>
-          <p class="message">Not registered ? <a href="/Register.html">Create an account</a></p>
-        </form>
-      </div>
     </div>
-</body>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 DSCET eBook Zone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Password visibility toggle
+        document.getElementById('password-toggle').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const passwordIcon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            }
+        });
+
+        // Login form submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = '/index.html';
+        });
+    </script>
 </body>
 </html>

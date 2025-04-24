@@ -4,170 +4,310 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/be1ba39dfe.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>DSCET Ebook Zone</title>
+    <title>DSCET Ebook Zone - Premium Programming Books</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-right">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/products.html">Products</a></li>
-            <li><a href="/About.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="/Register.html">Create Account</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><span>DSCET</span> eBooks</a>
+            </div>
+            <div class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/products.html">Books</a></li>
+                <li><a href="/About.html">About Us</a></li>
+                <li><a href="/login.html" class="btn-login">Sign In</a></li>
+                <li><a href="/Register.html" class="btn-register">Register</a></li>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Expand Your Knowledge with Premium eBooks</h1>
+            <p>Discover thousands of programming and tech books to advance your skills and career.</p>
+            <div class="hero-buttons">
+                <a href="/products.html" class="btn-primary">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                <a href="#featured" class="btn-secondary">View Featured</a>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <div class="section-1">
-        <div class="Section-1-text">
-            <center>   
-                 
-                <h1>Welcome to DSCET Ebook Zone</h1>
-                <p>You can find out yours book here.</p>
-                <a href="/products.html" class="btn">Explore Here  <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
-            </center>
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-book"></i>
+            <h3>Premium Content</h3>
+            <p>High-quality books from industry experts</p>
         </div>
-        
-    </div>
+        <div class="feature">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Read Anywhere</h3>
+            <p>Access on any device, anytime</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Learn & Grow</h3>
+            <p>Progress tracking and certificates</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-sync"></i>
+            <h3>Always Updated</h3>
+            <p>Get access to the latest editions</p>
+        </div>
+    </section>
 
-    <!-- <div>
-        <marquee behavior="" direction="left">today offer</marquee>
-    </div> -->
-
-    <div class="section-2">
-       <h2>Featured Products </h2>
-        <!-- <a href="#"><img src="./images/img_2.jpg" alt=""> -->
+    <section class="featured-books" id="featured">
+        <h2>Featured Programming Books</h2>
         <div class="gallery">
-            <div class="image-holder">
-                <a href="/products.html">
-                    <img src="/images/html.jpeg" alt="img-1">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/css.jpeg" alt="img-2">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/javascript.jpeg" alt="img-3">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/python.jpeg" alt="img-4">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/java.jpeg" alt="img-5">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/assembly.jpeg" alt="img-6">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/ruby.jpeg" alt="img-7">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="products.html">
-                    <img src="./images/swift.jpeg" alt="img-8">
-                </a>
-            </div>
-           <!-- <div class="image-holder">
-                <a href="#">
-                    <img src="./images/img_10.jpg" alt="img-9">
-                </a>
-            </div>
-            <div class="image-holder">
-                <a href="#">
-                    <img src="./images/img_11.jpg" alt="img-10">
-                </a>
-            </div>  -->
-
-
-        </div>
-
-    </div>
-    <!-- <div class="section-3">
-        <h3>Products</h3>
-        <br>
-        <div class="view-card">
-            <div class="card">
-                <center><img src="./images/img_11.jpg" alt="Avatar"></center>
-                <div class="container">
-                  <center>
-                    <h4><b>John Doe</b></h4> 
-                    <p>Architect & Engineer</p>
-                  </center> 
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="/images/html.jpeg" alt="HTML Book">
+                    <div class="overlay">
+                        <a href="/products.html" class="btn-view">Quick View</a>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h4>HTML5: The Complete Reference</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="./images/img_11.jpg" alt="Avatar">
-                <div class="container">
-                  <h4><b>John Doe</b></h4> 
-                  <p>Architect & Engineer</p> 
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="./images/css.jpeg" alt="CSS Book">
+                    <div class="overlay">
+                        <a href="/products.html" class="btn-view">Quick View</a>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h4>CSS Mastery: Advanced Web Design</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
                 </div>
             </div>
-
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="./images/javascript.jpeg" alt="JavaScript Book">
+                    <div class="overlay">
+                        <a href="/products.html" class="btn-view">Quick View</a>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h4>JavaScript: The Good Parts</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="./images/python.jpeg" alt="Python Book">
+                    <div class="overlay">
+                        <a href="/products.html" class="btn-view">Quick View</a>
+                    </div>
+                </div>
+                <div class="book-info">
+                    <h4>Python Crash Course</h4>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.7)</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </div>  -->
-
-    <div class="section-4">
-        <h2>Featured Brands</h2>
-        <div class="brand">
-            <img src="./images/book_logo1.png" alt="">
+        <div class="view-more">
+            <a href="/products.html" class="btn-secondary">View All Books</a>
         </div>
-        <div class="brand">
-            <img src="./images/book_logo_6.png" alt="">
-        </div>
-        <div class="brand">
-            <img src="./images/book_logo3.png" alt="">
-        </div>
-        <div class="brand">
-            <img src="./images/book_logo_4.png" alt="">
-        </div>
-        
-    </div>
+    </section>
 
-    <!-- section-5 contact us  -->
-    <div class="section-5">
-        
-              <h2>Contact Us</h2>
-              <p>Leave us a message or suggestion:</p>
+    <section class="partners">
+        <h2>Trusted by Leading Publishers</h2>
+        <div class="partner-logos">
+            <img src="./images/book_logo1.png" alt="Publisher 1">
+            <img src="./images/book_logo_6.png" alt="Publisher 2">
+            <img src="./images/book_logo3.png" alt="Publisher 3">
+            <img src="./images/book_logo_4.png" alt="Publisher 4">
+        </div>
+    </section>
 
-              <div class="column">
-                <form action="/index.html">
-                  <label for="fname">Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your first name">
-                  
-                  <label for="country">Place</label>
-                  <select id="country" name="country">
-                    <option value="india">Mamallapuram</option>
-                    <option value="australia">Chengalpattu</option>
-                    <option value="canada">Kalpakkam</option>
-                    <option value="usa">Marakanam</option>
-                  </select>
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something" style="height:170px"></textarea>
-                  <input  onclick="onSubmit()" class="submit" type="submit" value="Submit">
-                  
+    <section class="testimonials">
+        <h2>What Our Readers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>The quality of books and the interface make learning programming languages so much easier. Highly recommended!</p>
+                <div class="user">
+                    <img src="./images/rakesh.jpg" alt="User" class="user-img">
+                    <div class="user-info">
+                        <h4>Rakesh S</h4>
+                        <p>Software Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                <p>I've learned three programming languages using DSCET eBooks. The content is always up-to-date and comprehensive.</p>
+                <div class="user">
+                    <img src="./images/gunal.jpeg" alt="User" class="user-img">
+                    <div class="user-info">
+                        <h4>Gunalan S</h4>
+                        <p>Computer Science Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or suggestion? We'd love to hear from you!</p>
+        <div class="contact-container">
+            <form id="contact-form" action="/index.html" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="mamallapuram">Mamallapuram</option>
+                        <option value="chengalpattu">Chengalpattu</option>
+                        <option value="kalpakkam">Kalpakkam</option>
+                        <option value="marakanam">Marakanam</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>DSCET Campus, Kalpakkam Road, Chennai, Tamil Nadu</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@dscetebooks.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 1234567890</p>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>DSCET eBooks</h3>
+                <p>Your premier source for high-quality programming and technical ebooks to advance your skills and career.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/products.html">Books</a></li>
+                    <li><a href="/About.html">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="/products.html#FrontEnd">Frontend Development</a></li>
+                    <li><a href="/products.html#BackEnd">Backend Development</a></li>
+                    <li><a href="/products.html#DataScience">Data Science</a></li>
+                    <li><a href="/products.html#CyberSecurity">Cyber Security</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates on new releases and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
                 </form>
-              </div>
-
-    </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 DSCET eBook Zone. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        function onSubmit(){
-            alert("Thank You for your Leave us a message or suggestion😊")
-        }
+        // Mobile menu toggle
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
 
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for your message! We'll get back to you soon.");
+            this.reset();
+        });
+
+        // Newsletter subscription
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for subscribing to our newsletter!");
+            this.reset();
+        });
     </script>
 </body>
 </html>
